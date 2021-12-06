@@ -6,32 +6,58 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface AdventDay1 {
+    }
+    interface AdventDay2 {
+    }
+    interface AdventDay5 {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAdventDay1Element extends Components.AdventDay1, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAdventDay1Element: {
+        prototype: HTMLAdventDay1Element;
+        new (): HTMLAdventDay1Element;
+    };
+    interface HTMLAdventDay2Element extends Components.AdventDay2, HTMLStencilElement {
+    }
+    var HTMLAdventDay2Element: {
+        prototype: HTMLAdventDay2Element;
+        new (): HTMLAdventDay2Element;
+    };
+    interface HTMLAdventDay5Element extends Components.AdventDay5, HTMLStencilElement {
+    }
+    var HTMLAdventDay5Element: {
+        prototype: HTMLAdventDay5Element;
+        new (): HTMLAdventDay5Element;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "advent-day1": HTMLAdventDay1Element;
+        "advent-day2": HTMLAdventDay2Element;
+        "advent-day5": HTMLAdventDay5Element;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface AdventDay1 {
+    }
+    interface AdventDay2 {
+    }
+    interface AdventDay5 {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "advent-day1": AdventDay1;
+        "advent-day2": AdventDay2;
+        "advent-day5": AdventDay5;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "advent-day1": LocalJSX.AdventDay1 & JSXBase.HTMLAttributes<HTMLAdventDay1Element>;
+            "advent-day2": LocalJSX.AdventDay2 & JSXBase.HTMLAttributes<HTMLAdventDay2Element>;
+            "advent-day5": LocalJSX.AdventDay5 & JSXBase.HTMLAttributes<HTMLAdventDay5Element>;
         }
     }
 }

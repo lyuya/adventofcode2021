@@ -1,14 +1,13 @@
 import { Component, h } from '@stencil/core';
-
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'advent-day5',
+  styleUrl: 'advent-day5.css',
   shadow: true,
 })
 export class MyComponent {
   template: number[][] = [];
   async fetchFile(): Promise<any[]> {
-    const contentFile = await this.readTextFile('test.txt');
+    const contentFile = await this.readTextFile(`/assets/day5.txt`);
     return contentFile.split(/\r?\n/);
   }
 

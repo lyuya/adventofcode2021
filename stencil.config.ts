@@ -1,5 +1,5 @@
 import { Config } from '@stencil/core';
-
+import { sass } from "@stencil/sass";
 export const config: Config = {
   namespace: 'adventofcode',
   outputTargets: [
@@ -18,4 +18,12 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  plugin:[
+    sass({
+      injectGlobalPath:[]
+    })
+  ],
+  copy: [
+    {src:''}
+  ]
 };
